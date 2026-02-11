@@ -1,12 +1,9 @@
 services:
   tinynotes:
     image: php:8.3-apache
-    container_name: tinynotes
     restart: unless-stopped
     environment:
-      - APP_PASSWORD=${APP_PASSWORD}
+      APP_PASSWORD: "tammy2026"
     volumes:
       - ./index.php:/var/www/html/index.php:ro
       - ./data:/var/www/html/data
-    ports:
-      - "8080:80"
